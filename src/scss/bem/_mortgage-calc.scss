@@ -1,0 +1,276 @@
+.mortgage-calc {
+    &.section {
+        @include breakpointMF(tablet) {
+            padding: 6rem 0;
+        }
+    }
+
+    &__list-wrapper {
+        position: relative;
+        margin-top: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: unset;
+        }
+    }
+
+    &__scroll-list {
+        @include breakpointMF(tablet) {
+            height: 74.5rem;
+            overflow: auto;
+            padding-right: 1.2rem;
+
+            &::-webkit-scrollbar {
+                background-color: white;
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--Black-10);
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: white;
+            }
+        }
+    }
+
+    &__item {
+        margin-bottom: 1.6rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        padding: 2rem;
+        border: 1px solid transparent;
+        transition: border 0.3s ease-out;
+
+        @include breakpointMF(tablet) {
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: center;
+            gap: 3rem;
+            padding: unset;
+        }
+
+        & > span {
+            opacity: 0.5;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+
+        &--border {
+            position: relative;
+
+            background: var(--White-White, #FFF);
+            @extend ._border-16;
+
+            @include breakpointMF(tablet) {
+                padding: 2.7rem 4rem;
+            }
+
+            label {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 200;
+
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__col-first {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 1.2rem;
+        margin-bottom: 2.8rem;
+
+        @include breakpointMF(tablet) {
+            flex: 0 0 30.4rem;
+            column-gap: 2rem;
+
+            margin-bottom: unset;
+            margin-right: 1rem;
+        }
+
+        & > p {
+            font-size: 2rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+        }
+    }
+
+    &__cols {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.8rem;
+
+        @include breakpointMF(tablet) {
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            gap: 2rem;
+        }
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: space-between;
+
+            flex: 1 0 calc(50%);
+            max-width: calc(50% - 1.4rem);
+
+            @include breakpointMF(tablet) {
+                flex: unset;
+                justify-content: unset;
+                min-width: 13rem;
+                max-width: unset;
+            }
+
+            & > p {
+                margin-bottom: 1.2rem;
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                letter-spacing: -0.04em ;
+
+                @include breakpointMF(tablet) {
+                    margin-bottom: unset;
+                    letter-spacing: unset;
+                }
+            }
+
+            & > span {
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+        width: 5.4rem;
+        height: 5.4rem;
+
+        overflow: hidden;
+        border-radius: 100%;
+
+        img {
+            display: block;
+            width: 100%;
+            max-width: unset;
+            min-height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__radio {
+        &:checked {
+            & + .mortgage-calc__label {
+                border-color: var(--Red, #CF000C);
+            }
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 5rem;
+        padding: 2rem;
+        text-align: center;
+
+        background-color: rgba(2, 2, 2, 0.05);
+        border-radius: 0.8rem;
+
+        @include font(1.4rem, 100%, 400);
+        @extend ._border-12;
+
+        @include breakpointMF(tablet) {
+            height: 7rem;
+            padding: 2.5rem;
+
+            color: var(--Black, #020202);
+
+            @include font(1.6rem, 100%, 500);
+        }
+    }
+
+    &__form-calc {
+        &.programs__form-calc {
+            .simple-range__label {
+                color: var(--Black-60, rgba(2, 2, 2, 0.6));
+            }
+
+            .form-calc__inputs {
+                @include breakpointMF(tablet) {
+                    margin-bottom: 6rem;
+                }
+            }
+
+            .form-calc__final {
+                @include breakpointMF(tablet) {
+                    margin-bottom: 3.2rem;
+                }
+            }
+
+            .form-calc__input {
+                @include breakpointMF(tablet) {
+                    margin-bottom: 2.1rem;
+                }
+            }
+        }
+    }
+
+    &__header {
+        position: absolute;
+        left: 0;
+        bottom: calc(100% + 2rem);
+
+        width: 100%;
+        padding: 0 4rem;
+
+        &.mortgage-calc__label {
+            .mortgage-calc__cols {
+                li {
+                    & > p {
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 130%;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}

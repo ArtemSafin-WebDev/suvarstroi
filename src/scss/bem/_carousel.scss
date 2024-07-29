@@ -1,0 +1,126 @@
+.carousel {
+    &__body {
+        @include breakpoint(small-tablet) {
+            width: 100%;
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__title {
+        @include breakpointMF(tablet) {
+            max-width: min-content;
+        }
+    }
+
+    &__swiper.swiper {
+        @include breakpoint(small-tablet) {
+            margin-right: calc(var(--content-padding, 2rem) * -1);
+            padding-right: var(--content-padding, 2rem);
+        }
+    }
+
+    &__swiper {
+        &:not(.carousel__swiper--no-overflow) {
+            &.swiper {
+                @include breakpointMF(tablet) {
+                    margin-right: -100%;
+                    padding-right: 100%;
+                }
+            }
+        }
+
+        &--triple {
+            &.swiper {
+                margin-right: -2rem;
+                padding-right: 2rem;
+
+                @include breakpointMF(tablet) {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+
+        &--flex-end {
+            @include breakpointMF(tablet) {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: calc(var(--gap) * 2);
+
+        &>* {
+            flex-shrink: 0;
+        }
+    }
+
+    &__mailing {
+        &.main-btn {
+            width: 100%;
+            margin-top: 0.8rem;
+
+            @include breakpointMF(tablet) {
+                width: max-content;
+                margin-top: 3.4rem;
+            }
+        }
+    }
+
+    &__control {
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+        }
+    }
+
+    &__swiper-wrapper {
+        width: 100%;
+        @include breakpointMF(tablet) {
+            grid-column: span 2;
+        }
+    }
+
+    &__link {
+        margin-top: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: 2.4rem;
+        }
+
+        &.main-btn {
+            width: 100%;
+
+            color: var(--Red, #CF000C);
+            background: var(--White, #FFF);
+            border: 1px solid var(--Red-15, rgba(207, 0, 12, 0.15));
+
+            @include hoverActive() {
+                border-color: transparent;
+                color: var(--Red, #CF000C);
+                background-color: var(--Pink, #FAE5E7);
+            }
+        }
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.4rem;
+        }
+    }
+}

@@ -1,0 +1,327 @@
+.visually-hidden {
+    @include visuallyHidden();
+}
+
+[class].display-none {
+    display: none !important;
+}
+
+.no-scroll {
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    body {
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+.hide-on-mobile {
+    @include breakpoint(small-tablet) {
+        display: none !important;
+    }
+}
+
+.show-on-mobile {
+    @include breakpointMF(tablet) {
+        display: none !important;
+    }
+}
+
+._border-12 {
+    border-radius: 0.4rem;
+
+    @include breakpointMF(tablet) {
+        border-radius: 1.2rem;
+    }
+}
+
+._border-16 {
+    border-radius: 1.2rem;
+
+    @include breakpointMF(tablet) {
+        border-radius: 1.6rem;
+    }
+}
+
+._border-20 {
+    border-radius: 1.2rem;
+
+    @include breakpointMF(tablet) {
+        border-radius: 2rem;
+    }
+}
+
+._border-24 {
+    border-radius: 1.2rem;
+
+    @include breakpointMF(tablet) {
+        border-radius: 2.4rem;
+    }
+}
+
+.opacity-06 {
+    opacity: 0.6;
+}
+
+._header-padding-top {
+    padding-top: calc(var(--header-height) + 4rem);
+
+    @include breakpointMF(tablet) {
+        padding-top: calc(var(--header-height) + calc(var(--gap) * 10));
+    }
+}
+
+._breadcrumbs-padding-top {
+    padding-top: calc(var(--breadcrumbs-height) + 2rem);
+
+    @include breakpointMF(tablet) {
+        padding-top: calc(var(--breadcrumbs-height) + calc(var(--gap) * 10));
+    }
+}
+
+.links {
+    @include font(1.6rem, 100%, 400);
+}
+
+._thin-text {
+    font-weight: 300;
+}
+
+.phone-link {
+    @include font(1.4rem, 100%, 500);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    &:not(.socials-link) {
+        @include hoverActive() {
+            color: var(--Red);
+        }
+    }
+
+    @include breakpointMF(tablet) {
+        @include font(1.6rem, 130%, 500);
+    }
+}
+
+[class*="--text-biggest"] {
+    @include font(4.2rem, 100%, 400);
+    letter-spacing: -0.0126em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(11rem, 100%, 400);
+        letter-spacing: -0.03em;
+    }
+}
+
+[class*="--text-h2"] {
+    @include font(4.2rem, 100%, 400);
+    letter-spacing: -0.02em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(9rem, 100%, 400);
+        letter-spacing: -0.03em;
+    }
+}
+
+[class*="--h3-text"] {
+    @include font(3rem, 100%, 400);
+    letter-spacing: -0.01em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(5.4rem, 100%, 400);
+        letter-spacing: -0.02em;
+    }
+}
+
+[class*="--h4-text"] {
+    @include font(4rem, 100%, 400);
+    letter-spacing: -0.02em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(4rem, 105%, 400);
+    }
+}
+
+[class*="--h5-text"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.04em;
+
+    @include breakpointMF(tablet) {
+        @include font(3.4rem, 110%, 400);
+        letter-spacing: -0.03em;
+    }
+}
+
+[class*="--h6-text"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.02em;
+
+    @include breakpointMF(tablet) {
+        @include font(2.8rem, 110%, 400);
+        letter-spacing: -0.02em;
+    }
+}
+
+[class*="--text-80"] {
+    @include font(3rem, 100%, 300);
+    letter-spacing: -0.015em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(8rem, 100%, 300);
+        letter-spacing: -0.048em;
+    }
+}
+
+[class*="--text-70"] {
+    @include font(3rem, 100%, 400);
+    letter-spacing: -0.015em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(7rem, 100%, 400);
+        letter-spacing: -0.035em;
+    }
+}
+
+[class*="--text-60"] {
+    @include font(2rem, 100%, 300);
+    letter-spacing: -0.04em;
+
+    @include breakpointMF(tablet) {
+        @include font(6rem, 100%, 300);
+        letter-spacing: -0.03em;
+    }
+}
+
+[class*="--text-32"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.04em;
+
+    @include breakpointMF(tablet) {
+        @include font(3.2rem, 100%, 400);
+        letter-spacing: -0.02em;
+    }
+}
+
+[class*="--text-34"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.004em;
+
+    @include breakpointMF(tablet) {
+        @include font(3.4rem, 110%, 400);
+        letter-spacing: -0.068em;
+    }
+}
+
+[class*="--text-36"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.004em;
+
+    @include breakpointMF(tablet) {
+        @include font(3.6rem, 110%, 400);
+        letter-spacing: -0.014em;
+    }
+}
+
+[class*="--text-24"] {
+    @include font(1.6rem, 100%, 400);
+
+    @include breakpointMF(tablet) {
+        @include font(2.4rem, 11 0%, 400);
+    }
+}
+
+[class*="--text-18"] {
+    @include font(1.6rem, 100%, 400);
+
+    @include breakpointMF(tablet) {
+        @include font(1.8rem, 120%, 400);
+    }
+}
+
+[class*="--text-22"] {
+    @include font(2rem, 108%, 400);
+    letter-spacing: -0.03em;
+
+    @include breakpointMF(tablet) {
+        @include font(2.2rem, 120%, 400);
+        letter-spacing: -0.02em;
+    }
+}
+
+[class*="--text-20"] {
+    @include font(1.8rem, 108%, 400);
+    letter-spacing: -0.08em;
+
+    @include breakpointMF(tablet) {
+        @include font(2rem, 120%, 400);
+    }
+}
+
+[class*="--text-26"] {
+    @include font(2rem, 100%, 400);
+    letter-spacing: -0.04em;
+
+    @include breakpointMF(tablet) {
+        font-feature-settings: 'clig' off, 'liga' off;
+        @include font(2.6rem, 110%, 400);
+        letter-spacing: -0.02em;
+    }
+}
+
+[class*="--text-28"] {
+    @include font(1.8rem, 100%, 400);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(2.8rem, 100%, 400);
+        letter-spacing: -0.02em;
+    }
+}
+
+[class*="--text-30"] {
+    @include font(1.8rem, 100%, 400);
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(3rem, 110%, 400);
+        letter-spacing: -0.009em;
+    }
+}
+
+[class*="--text-64"] {
+    @include font(3rem, 100%, 300);
+    letter-spacing: -0.05em;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    @include breakpointMF(tablet) {
+        @include font(6.4rem, 100%, 300);
+        letter-spacing: -0.032em;
+    }
+}
+
+[class*="--text-14"] {
+    &.form-footer__agreement,
+    &.dev__text,
+    &.page-footer__copyright-text,
+    &.page-footer__policy {
+        @include font(1.0rem, 120%, 400);
+
+        @include breakpointMF(tablet) {
+            @include font(1.4rem, 130%, 400);
+        }
+    }
+
+    @include breakpointMF(tablet) {
+        @include font(1.4rem, 130%, 400);
+    }
+}

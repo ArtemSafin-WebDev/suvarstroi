@@ -1,0 +1,116 @@
+.navbar {
+    width: 100%;
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        gap: 0;
+
+        width: max-content;
+        padding: 0.4rem;
+        border-radius: 0.8rem;
+        background: var(--Light-Grey, #F5F5F5);
+
+        @include breakpointMF(tablet) {
+            padding: 0.8rem;
+        }
+    }
+
+    &__item {
+        &--fb50 {
+            flex: 1 0 50%;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+
+        width: 100%;
+        max-height: 4.2rem;
+        padding: 1.5rem 2rem;
+
+        background-color: transparent;
+        border-radius: 0.4rem;
+        text-align: center;
+        transition: all 0.3s ease-out;
+
+        @include breakpointMF(tablet) {
+            max-height: 5rem;
+            border-radius: 0.8rem;
+        }
+
+        .icon {
+            width: 0;
+            height: 1.4rem;
+            fill: var(--White, #fff);
+
+            transform: scale(0);
+            opacity: 0;
+            width: 0;
+            transition: all 0.3s ease-out;
+
+            @include breakpointMF(tablet) {
+                width: 0;
+                height: 1.6rem;
+            }
+        }
+
+        span {
+            display: block;
+            color: var(--Black, #020202);
+            line-height: 1;
+            font-feature-settings: 'clig' off, 'liga' off;
+            transition: color 0.3s ease-out;
+            white-space: nowrap;
+        }
+
+        &--active {
+            gap: 0.8rem;
+            background-color: var(--Blue, #212173);
+
+            .icon {
+                width: 1.4rem;
+                transform: scale(1);
+                opacity: 1;
+
+                @include breakpointMF(tablet) {
+                    width: 1.6rem;
+                }
+            }
+
+            span {
+                color: var(--White, #fff);
+            }
+        }
+
+        &--darker {
+            &.navbar__button--active {
+                background-color: var(--Blue-Dark-Blue, #101038);
+            }
+        }
+    }
+
+    &.navbar--width-auto {
+
+        @include breakpointMF(tablet) {
+            width: auto;
+            max-width: unset;
+        }
+
+        .navbar__item {
+            @include breakpointMF(tablet) {
+                flex: 1 1 auto;
+            }
+        }
+    }
+
+    &.general-plan__navbar {
+        .navbar__button {
+            min-width: 10.6rem;
+        }
+    }
+}

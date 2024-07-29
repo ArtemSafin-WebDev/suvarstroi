@@ -1,0 +1,889 @@
+<div class="plans">
+    {{#if planIsSection}}
+    <div class="plans__body">
+        <div class="plans__big-left">
+            <form action="" class="plans__filters filters">
+                <div class="filters__row">
+                    <div class="filters__fields">
+                        <div class="filters__field filters__field--flex-g0 filters__field--ranges">
+                            <div class="radios">
+                                <div class="radios__label range-slider__label">
+                                    Количество комнат
+                                </div>
+
+                                <div class="radios__items">
+                                    <label class="radios__item radios__item--wider">
+                                        <input type="checkbox" name="rooms" value="studios" class="radios__item-input">
+                                        <span class="radios__item-text">
+                                            Студия
+                                        </span>
+                                    </label>
+                                    <label class="radios__item">
+                                        <input type="checkbox" name="rooms" value="1" class="radios__item-input">
+                                        <span class="radios__item-text">
+                                            1
+                                        </span>
+                                    </label>
+                                    <label class="radios__item">
+                                        <input type="checkbox" name="rooms" value="2" class="radios__item-input">
+                                        <span class="radios__item-text">
+                                            2
+                                        </span>
+                                    </label>
+                                    <label class="radios__item">
+                                        <input type="checkbox" name="rooms" value="3" class="radios__item-input">
+                                        <span class="radios__item-text">
+                                            3
+                                        </span>
+                                    </label>
+                                    <label class="radios__item">
+                                        <input type="checkbox" name="rooms" value="4" class="radios__item-input">
+                                        <span class="radios__item-text">
+                                            4+
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__field filters__field--ranges">
+                            <div class="range-slider js-range-slider-double" data-min="1200000" data-max="20000000"
+                                data-step="100000">
+                                <div class="range-slider__label">
+                                    Стоимость, руб.
+                                </div>
+                                <div class="range-slider__inputs">
+                                    <div class="range-slider__input-wrapper">
+                                        <span class="range-slider__input-pretext">
+                                            от
+                                        </span>
+                                        <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                                    </div>
+
+                                    <div class="range-slider__inputs-divider">
+
+                                    </div>
+                                    <div class="range-slider__input-wrapper">
+                                        <span class="range-slider__input-pretext">
+                                            до
+                                        </span>
+                                        <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                                    </div>
+                                </div>
+
+                                <div class="range-slider__element">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__field filters__field--flex-g0">
+                            <div class="range-slider js-range-slider-double" data-min="20" data-max="400" data-step="1">
+                                <div class="range-slider__label">
+                                    Площадь, м
+                                </div>
+                                <div class="range-slider__inputs">
+                                    <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                        <span class="range-slider__input-pretext">
+                                            от
+                                        </span>
+                                        <input type="tel" class="range-slider__input js-numeric-input">
+                                    </div>
+
+                                    <div class="range-slider__inputs-divider">
+
+                                    </div>
+                                    <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                        <span class="range-slider__input-pretext">
+                                            до
+                                        </span>
+                                        <input type="tel" class="range-slider__input js-numeric-input">
+                                    </div>
+                                </div>
+
+                                <div class="range-slider__element">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="plans__small-right"></div>
+    </div>
+
+    <div class="plans__body js-plans-sliders-wrapper">
+        <div class="plans__big-left">
+            <div class="plans__switched-windows">
+                <div class="plans__main-window">
+                    <div class="plans__layouts">
+                        <p class="plans__title plans__title--text-18">
+                            <span class="plans__layouts-count">3</span>&nbsp;планировки по&nbsp;вашим параметрам
+                        </p>
+
+                        <ul class="plans__list">
+                            <li class="plans__item">
+                                <a href="#" data-plan-link="plan-001" class="plans__link">
+                                    <div class="plans__link-image">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/link.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/link.png" alt=" image" />
+                                        </picture>
+                                    </div>
+                                    <p class="plans__link-info plans__link-info--text-14">
+                                        24,42 м2
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="plans__item">
+                                <a href="#" data-plan-link="plan-002" class="plans__link">
+                                    <div class="plans__link-image">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/link.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/link.png" alt=" image" />
+                                        </picture>
+                                    </div>
+                                    <p class="plans__link-info plans__link-info--text-14">
+                                        24,42 м2
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="plans__item">
+                                <a href="#" data-plan-link="plan-003" class="plans__link">
+                                    <div class="plans__link-image">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/link.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/link.png" alt=" image" />
+                                        </picture>
+                                    </div>
+                                    <p class="plans__link-info plans__link-info--text-14">
+                                        24,42 м2
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="plans__sliders">
+                        <div data-plan-slider="plan-001" class="plans__slider display-none">
+                            <div class="plans__swiper swiper">
+                                <ul class="plans__swiper-wrapper swiper-wrapper">
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/plan.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/plan.png" alt=" image" />
+                                        </picture>
+                                    </li>
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/stage.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/stage.png" alt=" image" />
+                                        </picture>
+                                    </li>
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <div class="plans__genplan">
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/all/genplan.webp"
+                                                    alt=" image" />
+                                                <img class="lazy" src="./img/all/genplan.png" alt=" image" />
+                                            </picture>
+
+                                            <div class="plans__zoom zoom-btns">
+                                                <button type="button" class="zoom-in-btn js-zoom-in-genplan">
+                                                    <i class='icon-plus'></i>
+                                                </button>
+                                                <button type="button" class="zoom-in-btn  js-zoom-out-genplan">
+                                                    <i class='icon-minus'></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="plans__navbar js-navbar-swiper navbar">
+                                <ul class="navbar__list">
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="0"
+                                            class="js-navbar-button navbar__button navbar__button--darker navbar__button--active">
+                                            <span class="navbar__text">
+                                                План квартиры
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="1"
+                                            class="js-navbar-button navbar__button navbar__button--darker">
+                                            <span class="navbar__text">
+                                                На этаже
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="2"
+                                            class="js-navbar-button navbar__button navbar__button--darker">
+                                            <span class="navbar__text">
+                                                На генплане
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-plan-slider="plan-002" class="plans__slider display-none">
+                            <div class="plans__swiper swiper">
+                                <ul class="plans__swiper-wrapper swiper-wrapper">
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/plan.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/plan.png" alt=" image" />
+                                        </picture>
+                                    </li>
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/stage.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/stage.png" alt=" image" />
+                                        </picture>
+                                    </li>
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <div class="plans__genplan">
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/all/genplan.webp"
+                                                    alt=" image" />
+                                                <img class="lazy" src="./img/all/genplan.png" alt=" image" />
+                                            </picture>
+
+                                            <div class="plans__zoom zoom-btns">
+                                                <button type="button" class="zoom-in-btn js-zoom-in-genplan">
+                                                    <i class='icon-plus'></i>
+                                                </button>
+                                                <button type="button" class="zoom-in-btn  js-zoom-out-genplan">
+                                                    <i class='icon-minus'></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="plans__navbar js-navbar-swiper navbar">
+                                <ul class="navbar__list">
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="0"
+                                            class="js-navbar-button navbar__button navbar__button--darker navbar__button--active">
+                                            <span class="navbar__text">
+                                                План квартиры
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="1"
+                                            class="js-navbar-button navbar__button navbar__button--darker">
+                                            <span class="navbar__text">
+                                                На этаже
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="2"
+                                            class="js-navbar-button navbar__button navbar__button--darker">
+                                            <span class="navbar__text">
+                                                На генплане
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-plan-slider="plan-003" class="plans__slider display-none">
+                            <div class="plans__swiper swiper">
+                                <ul class="plans__swiper-wrapper swiper-wrapper">
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/plan.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/plan.png" alt=" image" />
+                                        </picture>
+                                    </li>
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/plans/stage.webp" alt=" image" />
+                                            <img class="lazy" src="./img/plans/stage.png" alt=" image" />
+                                        </picture>
+                                    </li>
+                                    <li class="plans__swiper-slide swiper-slide">
+                                        <div class="plans__genplan">
+                                            <picture>
+                                                <source type="image/webp" srcset="./img/all/genplan.webp"
+                                                    alt=" image" />
+                                                <img class="lazy" src="./img/all/genplan.png" alt=" image" />
+                                            </picture>
+
+                                            <div class="plans__zoom zoom-btns">
+                                                <button type="button" class="zoom-in-btn js-zoom-in-genplan">
+                                                    <i class='icon-plus'></i>
+                                                </button>
+                                                <button type="button" class="zoom-in-btn  js-zoom-out-genplan">
+                                                    <i class='icon-minus'></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="plans__navbar js-navbar-swiper navbar">
+                                <ul class="navbar__list">
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="0"
+                                            class="js-navbar-button navbar__button navbar__button--darker navbar__button--active">
+                                            <span class="navbar__text">
+                                                План квартиры
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="1"
+                                            class="js-navbar-button navbar__button navbar__button--darker">
+                                            <span class="navbar__text">
+                                                На этаже
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <button type="button" data-plan-thumb="2"
+                                            class="js-navbar-button navbar__button navbar__button--darker">
+                                            <span class="navbar__text">
+                                                На генплане
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plans__small-right">
+            <div data-plan-info="plan-001" class="plans__info-wrapper display-none">
+                <div class="plans__info">
+                    <h5 class="plans__name plans__name--h5-text">
+                        1-комнатная
+                    </h5>
+
+                    <ul class="plans__table">
+                        <li>
+                            <span class="plans__key">Проект</span>
+                            <span class="plans__value">Южный парк</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Дом</span>
+                            <span class="plans__value">4.2</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Площадь</span>
+                            <span class="plans__value">24,42 м2</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Этаж</span>
+                            <span class="plans__value">2 – 9</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Секции</span>
+                            <span class="plans__value">1А, 5В, 4Г</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Срок сдачи</span>
+                            <span class="plans__value">II квартал 2025</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Отделка</span>
+                            <span class="plans__value">Чистовая</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Стоимость, руб</span>
+                            <span class="plans__value">4 900 000</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Стоимость, руб / м2</span>
+                            <span class="plans__value">280 000</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Ежемесячный платёж, руб</span>
+                            <span class="plans__value">30 000</span>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="plans__controls">
+                    <a href="./flat.html" class="plans__big-btn main-btn main-btn--red">
+                        Забронировать квартиру
+                    </a>
+                </div>
+            </div>
+            <div data-plan-info="plan-002" class="plans__info-wrapper display-none">
+                <div class="plans__info">
+                    <h5 class="plans__name plans__name--h5-text">
+                        2-комнатная
+                    </h5>
+
+                    <ul class="plans__table">
+                        <li>
+                            <span class="plans__key">Проект</span>
+                            <span class="plans__value">Южный парк</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Дом</span>
+                            <span class="plans__value">4.2</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Площадь</span>
+                            <span class="plans__value">24,42 м2</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Этаж</span>
+                            <span class="plans__value">2 – 9</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Секции</span>
+                            <span class="plans__value">1А, 5В, 4Г</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Срок сдачи</span>
+                            <span class="plans__value">II квартал 2025</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Отделка</span>
+                            <span class="plans__value">Чистовая</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Стоимость, руб</span>
+                            <span class="plans__value">4 900 000</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Стоимость, руб / м2</span>
+                            <span class="plans__value">280 000</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Ежемесячный платёж, руб</span>
+                            <span class="plans__value">30 000</span>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="plans__controls">
+                    <a href="./flat.html" class="plans__big-btn main-btn main-btn--red">
+                        Забронировать квартиру
+                    </a>
+                </div>
+            </div>
+            <div data-plan-info="plan-003" class="plans__info-wrapper display-none">
+                <div class="plans__info">
+                    <h5 class="plans__name plans__name--h5-text">
+                        3-комнатная
+                    </h5>
+
+                    <ul class="plans__table">
+                        <li>
+                            <span class="plans__key">Проект</span>
+                            <span class="plans__value">Южный парк</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Дом</span>
+                            <span class="plans__value">4.2</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Площадь</span>
+                            <span class="plans__value">24,42 м2</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Этаж</span>
+                            <span class="plans__value">2 – 9</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Секции</span>
+                            <span class="plans__value">1А, 5В, 4Г</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Срок сдачи</span>
+                            <span class="plans__value">II квартал 2025</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Отделка</span>
+                            <span class="plans__value">Чистовая</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Стоимость, руб</span>
+                            <span class="plans__value">4 900 000</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Стоимость, руб / м2</span>
+                            <span class="plans__value">280 000</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Ежемесячный платёж, руб</span>
+                            <span class="plans__value">30 000</span>
+                        </li>
+                    </ul>
+
+
+                </div>
+
+                <div class="plans__controls">
+                    <a href="./flat.html" class="plans__big-btn main-btn main-btn--red">
+                        Забронировать квартиру
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="plans__body plans__body--wider js-plans-slider-wrapper">
+        <div class="plans__big-left">
+            <div class="plans__switched-windows plans__switched-windows--max-height plans__switched-windows--sticky">
+                <div class="plans__main-window">
+                    <div class="plans__slider">
+                        <div class="plans__swiper swiper">
+                            <ul class="plans__swiper-wrapper swiper-wrapper">
+                                <li class="plans__swiper-slide swiper-slide">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/plans/plan-2g.webp" alt=" image" />
+                                        <img class="lazy" src="./img/plans/plan-2g.png" alt=" image" />
+                                    </picture>
+                                </li>
+                                <li class="plans__swiper-slide swiper-slide">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/plans/stage.webp" alt=" image" />
+                                        <img class="lazy" src="./img/plans/stage.png" alt=" image" />
+                                    </picture>
+                                </li>
+                                <li class="plans__swiper-slide swiper-slide">
+                                    <div class="plans__genplan">
+                                        <picture>
+                                            <source type="image/webp" srcset="./img/all/genplan.webp" alt=" image" />
+                                            <img class="lazy" src="./img/all/genplan.png" alt=" image" />
+                                        </picture>
+
+                                        <div class="plans__zoom zoom-btns">
+                                            <button type="button" class="zoom-in-btn js-zoom-in-genplan">
+                                                <i class='icon-plus'></i>
+                                            </button>
+                                            <button type="button" class="zoom-in-btn  js-zoom-out-genplan">
+                                                <i class='icon-minus'></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="plans__swiper-slide swiper-slide">
+                                    <picture>
+                                        <source type="image/webp" srcset="./img/plans/window.webp" alt=" image" />
+                                        <img class="lazy" src="./img/plans/window.jpg" alt=" image" />
+                                    </picture>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="plans__navbar js-navbar-swiper navbar">
+                            <ul class="navbar__list">
+                                <li class="navbar__item">
+                                    <button type="button" data-plan-thumb="0"
+                                        class="js-navbar-button navbar__button navbar__button--active">
+                                        <span class="navbar__text">
+                                            План квартиры
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="navbar__item">
+                                    <button type="button" data-plan-thumb="1" class="js-navbar-button navbar__button">
+                                        <span class="navbar__text">
+                                            На этаже
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="navbar__item">
+                                    <button type="button" data-plan-thumb="2" class="js-navbar-button navbar__button">
+                                        <span class="navbar__text">
+                                            На генплане
+                                        </span>
+                                    </button>
+                                </li>
+                                <li class="navbar__item">
+                                    <button type="button" data-plan-thumb="3" class="js-navbar-button navbar__button">
+                                        <span class="navbar__text">
+                                            Вид из окон
+                                        </span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="plans__small-right">
+            <div class="plans__info-wrapper">
+                <div class="plans__info">
+                    <div class="plans__heading">
+                        <div class="plans__heading-top">
+                            <h5 class="plans__name plans__name--h5-text">
+                                Студия 24,42 м2
+                            </h5>
+
+                            <div class="plans__controls">
+                                <label class="plans__favorite-checkbox favorite-checkbox">
+                                    <input class="visually-hidden" hidden type="checkbox" name="favorite-checkbox"
+                                        id="favorite-checkbox-id">
+                                    <svg class="icon">
+                                        <use xlink:href="#fav"></use>
+                                    </svg>
+                                    <span></span>
+                                </label>
+
+                                <a href="#" class="plans__share square-btn hide-on-mobile">
+                                    <svg class="icon icon-share">
+                                        <use xlink:href="#share"></use>
+                                    </svg>
+                                </a>
+
+                                <a href="#" class="plans__share square-btn hide-on-mobile">
+                                    <svg class="icon icon-print">
+                                        <use xlink:href="#print"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="plans__heading-bottom">
+                            <div class="plans__heading-prices">
+                                <p class="plans__red-price plans__red-price--text-26">
+                                    4 900 000 ₽
+                                </p>
+                                <p class="plans__item-price">
+                                    200 655 руб за м2
+                                </p>
+                            </div>
+
+                            <div class="plans__heading-variants">
+                                <p class="plans__mortgage-text">
+                                    в&nbsp;ипотеку
+                                </p>
+                                <p class="plans__mortgage-price">
+                                    26 890 руб/мес
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="plans__table plans__table--collapsed">
+                        <li>
+                            <span class="plans__key">Проект</span>
+                            <span class="plans__value">Южный парк</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Расположение</span>
+                            <span class="plans__value">2 очередь, Секция 5</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Этаж</span>
+                            <span class="plans__value">2 – 9</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Отделка</span>
+                            <span class="plans__value">Чистовая</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Высота потолка, м</span>
+                            <span class="plans__value">2.7</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Срок сдачи</span>
+                            <span class="plans__value">II квартал 2025</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Высота потолка, м</span>
+                            <span class="plans__value">2.7</span>
+                        </li>
+                        <li>
+                            <span class="plans__key">Срок сдачи</span>
+                            <span class="plans__value">II квартал 2025</span>
+                        </li>
+                    </ul>
+
+                    <ul class="plans__labels plans__labels--collapsed">
+                        <li>
+                            <label class="plans__text-checkbox plans__text-checkbox--class text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-finishing" disabled>
+                                <span>
+                                    Комфорт класс
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="plans__text-checkbox text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled checked>
+                                <span>
+                                    <svg aria-hidden="true" class="icon-promo">
+                                        <use xlink:href="#promo"></use>
+                                    </svg>
+
+                                    Со скидкой
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled>
+                                <span>
+                                    С лоджией
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="text-checkbox">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled>
+                                <span>
+                                    2+ санузла
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="text-checkbox text-checkbox--tooltip">
+                                <input type="checkbox" hidden name="text-checkbox-view" disabled>
+                                <span>
+                                    С террасой
+
+                                    <strong></strong>
+                                    <i>Текст подсказки</i>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+
+                    <button class="plans__expand expand-link js-expand-link" type="button">
+                        Все параметры
+                        <i></i>
+                    </button>
+                </div>
+
+                <div class="plans__controls plans__controls--mobile-fixed">
+                    <a href="#" class="plans__red-btn main-btn main-btn--red">
+                        Забронировать
+                    </a>
+                    <a href="#" class="plans__white-btn main-btn main-btn--red main-btn--outlined">
+                        <span class="hide-on-mobile">
+                            Получить консультацию
+                        </span>
+                        <span class="show-on-mobile">
+                            Консультация
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="plans__radio-parameters">
+                    <li class="plans__radio-article radio-article">
+                        <input type="radio" hidden name="radio-payment" id="radio-article-mortgage" checked>
+                        <label for="radio-article-mortgage" class="radio-article__label"></label>
+                        <span class="radio-article__checkbox"></span>
+
+                        <div class="radio-article__body">
+                            <div class="radio-article__haeding">
+                                <p class="radio-article__title">В ипотеку от 15%</p>
+                                <p class="radio-article__desc">
+                                    Первоначальный взнос и ипотечный кредит от банка
+                                </p>
+                            </div>
+                            <div class="radio-article__info">
+                                <a href="#" class="radio-article__link ">
+                                    Подробнее
+                                </a>
+
+                                <div class="radio-article__variants">
+                                    <p class="radio-article__price">
+                                        от 426,89 тыс. ₽
+                                    </p>
+                                    <p class="radio-article__text">
+                                        Ежемесячный&nbsp;платеж
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="plans__radio-article radio-article">
+                        <input type="radio" hidden name="radio-payment" id="radio-article-fullpay">
+                        <label for="radio-article-fullpay" class="radio-article__label"></label>
+                        <span class="radio-article__checkbox"></span>
+
+                        <div class="radio-article__body">
+                            <div class="radio-article__haeding">
+                                <p class="radio-article__title">100%&nbsp;оплата</p>
+                                <p class="radio-article__desc">
+                                    Посредством ваших личных накоплений одним платежом без рассрочек и кредита от банка
+                                </p>
+                            </div>
+                            <div class="radio-article__info">
+                                <a href="#" class="radio-article__link ">
+                                    Подробнее
+                                </a>
+
+                                <div class="radio-article__variants">
+                                    <p class="radio-article__price">
+                                        4 900 000 ₽
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="plans__radio-article radio-article">
+                        <input type="radio" hidden name="radio-payment" id="radio-article-installment">
+                        <label for="radio-article-installment" class="radio-article__label"></label>
+                        <span class="radio-article__checkbox"></span>
+
+                        <div class="radio-article__body">
+                            <div class="radio-article__haeding">
+                                <p class="radio-article__title">Рассрочка</p>
+                                <p class="radio-article__desc">
+                                    Рассрочка без % или другие программы
+                                </p>
+                            </div>
+                            <div class="radio-article__info">
+                                <a href="#" class="radio-article__link ">
+                                    Подробнее
+                                </a>
+
+                                <div class="radio-article__variants">
+                                    <p class="radio-article__price">
+                                        от 426,89 тыс. ₽
+                                    </p>
+                                    <p class="radio-article__text">
+                                        Ежемесячный&nbsp;платеж
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {{/if}}
+</div>

@@ -1,0 +1,674 @@
+.plans {
+    &__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: 1fr 50.4rem;
+            align-items: stretch;
+            gap: 2.4rem;
+        }
+
+        &.plans__body--wider {
+            @include breakpointMF(tablet) {
+                grid-template-columns: 99.5rem 1fr;
+                align-items: stretch;
+                gap: 4.4rem;
+            }
+
+            .plans__big-left {
+                @include breakpointMF(tablet) {
+                }
+            }
+
+            .plans__main-window {
+                @include breakpointMF(tablet) {
+                    padding: 4rem;
+                    grid-template-columns: 100%;
+                }
+            }
+
+            .plans__small-right {
+                @include breakpointMF(tablet) {
+                    padding-right: 0;
+                    padding-left: 1rem;
+                }
+            }
+
+            .plans__swiper-slide {
+                &.swiper-slide {
+                    aspect-ratio: 1.71 / 1;
+                }
+            }
+
+
+            .plans__navbar {
+                margin-top: 2rem;
+                @include breakpointMF(tablet) {
+                    margin-top: 3.5rem;
+                }
+            }
+        }
+    }
+
+    &__filters {
+        margin-bottom: 2.5rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4.1rem;
+            padding-right: 1.6rem;
+        }
+
+        &.filters {
+            padding: 0;
+
+            @include breakpointMF(tablet) {
+                padding: 0;
+                padding-right: 1.6rem;
+            }
+
+            .filters__row {
+                margin-top: 0;
+                padding-top: 0;
+            }
+        }
+    }
+
+    &__switched-windows {
+        width: 100%;
+        height: 100%;
+
+        &--max-height {
+            max-height: 70rem;
+        }
+
+        &.plans__switched-windows--sticky {
+
+            @include breakpointMF(tablet) {
+                position: sticky;
+                top: 15rem;
+            }
+        }
+    }
+
+    &__main-window {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+        height: 100%;
+        padding: 1.6rem;
+
+        background-color: var(--Light-Grey, #F5F5F5);
+        @extend ._border-20;
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: 23rem 1fr;
+            padding: 2rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            overflow: hidden;
+        }
+    }
+
+    &__sliders {
+        width: 100%;
+        max-width: 74.2rem;
+    }
+
+    &__slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__swiper.swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__swiper-slide {
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            display: block;
+            max-width: unset;
+            height: 100%;
+            min-width: 100%;
+
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__layouts {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        overflow: hidden;
+        padding: 2rem 1.6rem;
+
+        background: var(--White, #FFF);
+        background-repeat: 1.2rem;
+
+        @include breakpointMF(tablet) {
+            max-height: 60rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 2.7rem;
+            letter-spacing: -0.036em;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        gap: 0.8rem;
+        flex-grow: 1;
+        overflow: auto;
+
+        @include breakpoint(small-tablet) {
+            margin-right: -1.6rem;
+            padding-right: 1.6rem;
+        }
+
+        @include breakpointMF(tablet) {
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: -2rem;
+            padding-bottom: 2rem;
+
+            margin-right: -1.2rem;
+            padding-right: 1.2rem;
+
+
+            &::-webkit-scrollbar {
+                background-color: white;
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--Black-10);
+                width: 4px;
+            }
+
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: white;
+            }
+        }
+    }
+
+    &__item {
+        flex-shrink: 0;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 1.2rem;
+        background-color: var(--White-White, #FFF);
+        border: 1px solid var(--Black-Black-10, rgba(2, 2, 2, 0.10));
+        border-radius: 1.2rem;
+        opacity: 0.6;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1;
+            padding: 0.4rem 1.5rem 1.6rem;
+        }
+
+        &.plans__link--active {
+            opacity: 1;
+            border-color: var(--Red-Red, #CF000C) ;
+        }
+
+        @include hoverActive() {
+            opacity: 1;
+        }
+    }
+
+    &__link-image {
+        flex-grow: 1;
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__link-info {
+        text-align: center;
+    }
+
+    &__swiper-slide {
+        &.swiper-slide {
+            aspect-ratio: 1.45 / 1;
+            overflow: hidden;
+        }
+    }
+
+    &__navbar {
+        margin-top: 2rem;
+
+        &.navbar {
+            width: 100%;
+
+            @include breakpointMF(tablet) {
+                width: max-content;
+            }
+
+            .navbar__list {
+                width: max-content;
+                background: var(--White, #FFF);
+
+                @include breakpointMF(tablet) {
+                    width: unset;
+                }
+            }
+
+            .navbar__item {
+                flex-grow: 1;
+
+                @include breakpointMF(tablet) {
+                    flex: 0 1 max-content;
+                }
+            }
+
+            .navbar__button {
+                width: 100%;
+
+                @include breakpointMF(tablet) {
+                    min-width: 13rem;
+                }
+            }
+        }
+    }
+
+    &__small-right {
+        @include breakpointMF(tablet) {
+            padding: 0.8rem 3rem 0;
+        }
+    }
+
+    &__info-swiper.swiper {
+        height: 100%;
+    }
+
+    &__info-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 2rem;
+        height: 100%;
+
+        @include breakpointMF(tablet) {
+            justify-content: space-between;
+        }
+
+        &:not(:has(.plans__table--collapsed)) {
+            .plans__expand {
+                display: none !important;
+            }
+        }
+    }
+
+    &__name {
+        margin-bottom: 1.6rem;
+        letter-spacing: -0.015em;
+
+        @include breakpointMF(tablet) {
+            letter-spacing: -0.0102em;
+        }
+    }
+
+    &__table {
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 2rem;
+
+            max-height: 4.3rem;
+            padding: 1.6rem 0;
+            border-bottom: 1px solid var(--Light-Gray, #E3E4E8);
+
+            @include breakpointMF(tablet) {
+                max-height: 4.5rem;
+            }
+
+            span {
+                display: block;
+            }
+        }
+
+        &.plans__table--collapsed {
+            li {
+                &:nth-child(1n + 7) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__key {
+        font-feature-settings: 'clig' off, 'liga' off;
+        line-height: 1.3;
+        opacity: 0.5;
+
+        @include breakpointMF(tablet) {
+            line-height: 1.5;
+        }
+    }
+
+    &__value {
+        letter-spacing: -0.056em;
+        line-height: 1;
+
+        @include breakpointMF(tablet) {
+            line-height: 1.3;
+        }
+    }
+
+    &__big-btn.main-btn {
+        width: 100%;
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__heading-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        .plans__name {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__heading-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    &__heading-variants,
+    &__heading-prices {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    &__heading-variants {
+        flex-direction: column-reverse;
+        gap: 1.2rem;
+
+        @include breakpointMF(tablet) {
+            align-items: flex-start;
+        }
+    }
+
+    &__red-price {
+        color: var(--Red-Red, #CF000C);
+        font-feature-settings: 'clig' off, 'liga' off;
+        letter-spacing: -0.052em;
+    }
+
+    &__item-price {
+        opacity: 0.5;
+        @include font(1.0rem, 120%, 400);
+
+        @include breakpointMF(tablet) {
+            @include font(1.4rem, 130%, 400);
+        }
+    }
+
+    &__mortgage-text {
+        color: var(--Black-50, rgba(2, 2, 2, 0.50));
+        font-feature-settings: 'clig' off, 'liga' off;
+    }
+
+    &__mortgage-price {
+        font-feature-settings: 'clig' off, 'liga' off;
+    }
+
+    &__controls {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1.6rem;
+
+        @include breakpointMF(tablet) {
+            flex-flow: row nowrap;
+            gap: 0.8rem;
+        }
+    }
+
+    &__white-btn,
+    &__red-btn {
+        flex: 1 1 50%;
+
+        &.main-btn {
+            @include breakpointMF(tablet) {
+                padding: 2.4rem;
+            }
+        }
+    }
+
+    &__white-btn {
+        &.main-btn {
+            @include breakpointMF(tablet) {
+                max-width: 24rem;
+            }
+        }
+    }
+
+    &__zoom {
+        position: absolute;
+        right: 3rem;
+        left: unset;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__favorite-checkbox {
+        &.favorite-checkbox {
+            @include breakpointMF(tablet) {
+                position: relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                width: 4rem;
+                height: 4rem;
+
+                .icon {
+                    position: relative;
+                    z-index: 10;
+
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    fill: none;
+                    stroke: var(--Black, #020202);
+                    fill-opacity: unset;
+                    stroke-opacity: unset;
+                }
+
+                span {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    z-index: 5;
+
+                    width: 100%;
+                    height: 100%;
+
+                    background: var(--White, #FFF);
+                    border-radius: 0.8rem;
+                    border: 1px solid rgba(2, 2, 2, 0.10);
+
+                    transition: background-color 0.3s ease-out;
+                    content: "";
+                }
+
+                @include hoverActive() {
+                    span {
+                        border-color: var(--Red-15, rgba(207, 0, 12, 0.15));
+                    }
+
+                    .icon {
+                        stroke: var(--Red, #cf000c);
+                        fill: none;
+                    }
+
+                    input {
+                        &:checked {
+                            &~.icon {
+                                stroke: var(--Red, #cf000c);
+                                fill: var(--Red, #cf000c);
+                            }
+                        }
+                    }
+                }
+
+                input {
+                    &:checked {
+                        &~.icon {
+                            stroke: var(--Red, #cf000c);
+                            fill: var(--Red, #cf000c);
+                        }
+
+                        &~span {
+                            background: var(--Pink-Pink, #FAE5E7);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        column-gap: 0.8rem;
+
+        &.plans__controls--mobile-fixed {
+            @include breakpoint(small-tablet) {
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                z-index: 1000;
+
+                flex-direction: row;
+                padding: 2rem;
+
+                background-color: var(--White, #fff);
+                border-top: 1px solid var(--Black-05, rgba(2, 2, 2, 0.05));
+                box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.06);
+            }
+
+            .main-btn {
+                @include breakpoint(small-tablet) {
+                    width: calc(100% / 2 - 0.4rem);
+                }
+            }
+        }
+    }
+
+    &__labels {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            gap: 0.4rem;
+            margin-top: 2.4rem;
+        }
+
+        &.plans__labels--collapsed {
+            li {
+                &:nth-child(1n + 5) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__text-checkbox {
+        &.text-checkbox {
+            & > span {
+                cursor: default;
+            }
+        }
+
+        &--class {
+            &.text-checkbox {
+                & > span {
+                    color: var(--Black, #020202);
+                    background-color: #E7EEF7;
+                    backdrop-filter: blur(10px);
+                }
+            }
+        }
+    }
+
+    &__expand {
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: 1.6rem;
+        }
+    }
+
+    &__radio-parameters {
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__radio-article {
+        margin-bottom: 0.8rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.6rem;
+        }
+    }
+}

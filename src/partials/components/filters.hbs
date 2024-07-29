@@ -1,0 +1,130 @@
+<div class="filters {{#if filterClass}}home__filter{{/if}}">
+    <div class="filters__site-container">
+        <form action="/" class="filters__form" method="GET">
+            <div class="filters__row">
+                <div class="filters__fields">
+                    <div class="filters__field filters__field--select">
+                        <div class="select select--first-hidden">
+                            <div class="select__label range-slider__label">
+                                Выбрать
+                            </div>
+                            <select name="project" class="js-custom-select">
+                                <option value="Выбрать">Выбрать</option>
+                                <option value="ЖК «Южный парк»">ЖК «Южный парк»</option>
+                                <option value="ЖК «Станция спортивная»">ЖК «Станция спортивная»</option>
+                                <option value="ЖК «Времена года»">ЖК «Времена года»</option>
+                                <option value="ЖК «Столичный»">ЖК «Столичный»</option>
+                                <option value="ЖК «Батталовский»">ЖК «Батталовский»</option>
+                                <option value="ЖК «Сказочный лес»">ЖК «Сказочный лес»</option>
+                                <option value="ЖК «Палитра»">ЖК «Палитра»</option>
+                                <option value="ЖК «Отражение»">ЖК «Отражение»</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="filters__field filters__field--flex-g0 filters__field--ranges">
+                        <div class="radios">
+                            <div class="radios__label range-slider__label">
+                                Количество комнат
+                            </div>
+
+                            <div class="radios__items">
+                                <label class="radios__item radios__item--wider">
+                                    <input type="checkbox" name="rooms" value="studios" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        Студия
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="1" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        1
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="2" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        2
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="3" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        3
+                                    </span>
+                                </label>
+                                <label class="radios__item">
+                                    <input type="checkbox" name="rooms" value="4" class="radios__item-input">
+                                    <span class="radios__item-text">
+                                        4+
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters__field filters__field--ranges">
+                        <div class="range-slider js-range-slider-double" data-min="1200000" data-max="20000000"
+                            data-step="100000">
+                            <div class="range-slider__label">
+                                Стоимость, руб.
+                            </div>
+                            <div class="range-slider__inputs">
+                                <div class="range-slider__input-wrapper">
+                                    <span class="range-slider__input-pretext">
+                                        от
+                                    </span>
+                                    <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                                </div>
+
+                                <div class="range-slider__inputs-divider">
+
+                                </div>
+                                <div class="range-slider__input-wrapper">
+                                    <span class="range-slider__input-pretext">
+                                        до
+                                    </span>
+                                    <input type="tel" class="range-slider__input js-numeric-input-decimals">
+                                </div>
+                            </div>
+
+                            <div class="range-slider__element">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters__field filters__field--flex-g0">
+                        <div class="range-slider js-range-slider-double" data-min="20" data-max="400" data-step="1">
+                            <div class="range-slider__label">
+                                Площадь, м
+                            </div>
+                            <div class="range-slider__inputs">
+                                <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                    <span class="range-slider__input-pretext">
+                                        от
+                                    </span>
+                                    <input type="tel" class="range-slider__input js-numeric-input">
+                                </div>
+
+                                <div class="range-slider__inputs-divider">
+
+                                </div>
+                                <div class="range-slider__input-wrapper range-slider__input-wrapper--small">
+                                    <span class="range-slider__input-pretext">
+                                        до
+                                    </span>
+                                    <input type="tel" class="range-slider__input js-numeric-input">
+                                </div>
+                            </div>
+
+                            <div class="range-slider__element">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="main-btn main-btn--red filters__submit">
+                    Смотреть 1533 квартиры
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

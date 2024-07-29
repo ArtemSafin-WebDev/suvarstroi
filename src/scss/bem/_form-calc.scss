@@ -1,0 +1,112 @@
+.form-calc {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    &__title {
+        margin-bottom: 2.8rem;
+        color: var(--Light-Blue, #A5D9FF);
+        font-feature-settings: 'clig' off, 'liga' off;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__inputs {
+        margin-bottom: 2.4rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4.8rem;
+        }
+    }
+
+    &__input {
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 1.6rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__final {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        margin-bottom: 2.8rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__final-sum {
+        &::after {
+            content: " \20BD";
+        }
+
+        &::before {
+            font-size: 2rem;
+            content: "от ";
+        }
+    }
+
+    &__submit {
+        margin-top: auto;
+
+        &.main-btn {
+            width: 100%;
+        }
+    }
+
+    &__agreement {
+        margin-top: 1.6rem;
+        opacity: 0.5;
+
+        @include breakpointMF(tablet) {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &.mortgage-calc__form-calc {
+        .form-calc__title {
+            color: var(--Black, #020202);
+        }
+
+        .form-calc__inputs {
+            @include breakpointMF(tablet) {
+                margin-bottom: 6rem;
+            }
+        }
+
+        .form-calc__final {
+            @include breakpointMF(tablet) {
+                margin-bottom: 3.2rem;
+            }
+        }
+
+        .simple-range {
+            .simple-range__label {
+                color: var(--Black-50, rgba(2, 2, 2, 0.5));
+            }
+
+            .simple-range__values {
+
+                .input {
+                    color: var(--Black, rgba(2, 2, 2));
+                    background: var(--White, #FFF);
+                    border: 1px solid rgba(255, 255, 255, 0.20);
+                }
+            }
+        }
+    }
+}

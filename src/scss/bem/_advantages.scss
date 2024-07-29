@@ -1,0 +1,236 @@
+.advantages {
+    &__window {
+        padding: 2.8rem 2rem;
+        background-color: var(--White, #FFF);
+        border: 1px solid rgba(2, 2, 2, 0.10);
+        @extend ._border-20;
+
+        @include breakpointMF(tablet) {
+            padding: 3rem;
+        }
+    }
+
+    &__slider {
+        position: relative;
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: unset;
+        }
+    }
+
+    &__info-swiper.swiper {
+        @include breakpointMF(tablet) {
+            height: 100%;
+        }
+    }
+
+    &__image-swiper-slide {
+        aspect-ratio: 1.32 / 1;
+        background-color: lightgray ;
+        @extend ._border-16;
+        overflow: hidden;
+
+        @include breakpointMF(tablet) {
+            aspect-ratio: 1.31 / 1;
+        }
+    }
+
+    &__info-swiper-slide {
+        display: grid;
+        grid-template-areas:
+            "adv-info-title adv-info-thumbs"
+            "adv-info-image adv-info-thumbs"
+            "adv-info-text adv-info-thumbs";
+    }
+
+    &__info-title {
+        grid-area: adv-info-title;
+    }
+
+    &__info-image {
+        grid-area: adv-info-image;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        padding: 2.8rem 0;
+
+        @include breakpointMF(tablet) {
+            display: block;
+            padding: unset;
+            padding-left: 25.4rem;
+        }
+    }
+
+    &__image {
+        max-width: 16.5rem;
+        @extend ._border-16;
+        overflow: hidden;
+        aspect-ratio: 1.2375 / 1;
+
+        img {
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        @include breakpointMF(tablet) {
+            max-width: 20rem;
+        }
+    }
+
+    &__info-text {
+        grid-area: adv-info-text;
+        align-self: end;
+        max-width: 54rem;
+        line-height: 150%;
+        opacity: 0.7;
+        font-feature-settings: 'clig' off, 'liga' off;
+    }
+
+    &__info-thumbs {
+        grid-area: adv-info-thumbs;
+
+        display: none;
+        justify-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+
+        padding: 0 1rem;
+
+        @include breakpointMF(tablet) {
+            display: flex;
+        }
+    }
+
+    &__info-thumb {
+        position: relative;
+        a {
+            display: block;
+            width: 6rem;
+            height: 4rem;
+            overflow: hidden;
+            border-radius: 0.4rem;
+
+            img {
+                display: block;
+                width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 200;
+
+            display: block;
+            width: 8rem;
+            height: 3rem;
+            transform: translate(-50%, -50%);
+
+            background-image: url("data:image/svg+xml, %3Csvg%20width%3D%2280%22%20height%3D%2230%22%20viewBox%3D%220%200%2080%2030%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.5%22%20y%3D%220.5%22%20width%3D%2279%22%20height%3D%2229%22%20rx%3D%221.5%22%20stroke%3D%22%23CF000C%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            transition: opacity 0.3s ease-out;
+            opacity: 0;
+            pointer-events: none;
+            content: "";
+        }
+
+        &.advantages__info-thumb--active {
+            pointer-events: none;
+            z-index: 100;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__image-swiper.swiper {
+        @include breakpointMF(tablet) {
+            height: 100%;
+        }
+    }
+
+    &__image-swiper-slide {
+        position: relative;
+
+        img {
+            @include centeredAbsolute();
+            z-index: 100;
+
+            display: block;
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 100;
+
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05));
+            content: "";
+        }
+    }
+
+    &__image-navs {
+        position: absolute;
+        right: 3rem;
+        bottom: 3rem;
+        z-index: 400;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        @include breakpointMF(tablet) {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    &__expand {
+        position: absolute;
+        top: 3rem;
+        right: 3rem;
+        z-index: 400;
+
+        &.expand {
+            display: none;
+
+            @include breakpointMF(tablet) {
+                display: flex;
+            }
+        }
+    }
+
+    &__expand-slide {
+        position: absolute;
+        top: 1.6rem;
+        right: 1.6rem;
+        z-index: 500;
+
+        &.expand {
+            @include breakpointMF(tablet) {
+                display: none;
+            }
+        }
+    }
+}

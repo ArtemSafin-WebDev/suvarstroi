@@ -1,0 +1,344 @@
+<footer
+    class="page-footer{{#if greyFooterClass}} page-footer--grey {{/if}}{{#if noMapFooterClass}} page-footer--no-map {{/if}}">
+    <script>
+        var mapData = [
+            {
+                coords: [55.818338, 49.143829],
+                title: 'Офис продаж',
+                name: 'ЖК Столичный',
+                address: `Казань, ул. Чистопольская 86/10 офис-287`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.689060, 49.201115],
+                title: 'Офис продаж',
+                name: 'ЖК Южный парк',
+                address: `Казань, ул. Уютная,1`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.761280, 49.150644],
+                title: 'Офис продаж',
+                name: 'ЖК Манхэттен',
+                address: `Казань, Оренбургский тракт 8д, 3 этаж`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.721502, 49.187600],
+                title: 'Офис продаж',
+                name: 'ЖК Палитра',
+                address: `Казань, ул.Братьев Батталовых 20 к.1`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+            {
+                coords: [55.724368, 49.174191],
+                title: 'Офис продаж',
+                name: 'ЖК Сказочный лес',
+                address: `Казань, ул. Рауиса Гареева, 109`,
+                phone: `8-800-444-14-94`,
+                email: `info@suvarstroit.ru`,
+                timeStart: `пн - пт  с  9:00  -  19:00`,
+                timeEnd: `сб - вс  с  10:00 -  17:00`,
+                image: `./img/map/pin.jpg`
+            },
+        ];
+
+        var mapZoom = 11;
+
+        var mapCenter = [55.800777, 49.107601];
+    </script>
+
+    <div class="page-footer__site-container">
+        <div class="page-footer__map-section map-section">
+            <div class="projects__heading map-section__heading">
+                <h2 class="projects__title projects__title--h3-text projects__title--end-dot">
+                    Офисы&nbsp;<span class="_thin-text">продаж</span>
+                </h2>
+            </div>
+
+            <div class="map-section__body programs__body">
+                <div class="map-section__aside">
+                    <ul class="map-section__list">
+                        <li>
+                            <button data-coords="55.818338, 49.143829" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-1.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Столичный</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул. Чистопольская 86/10 офис-287
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.689060, 49.201115" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-2.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Манхэттен</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, Оренбургский тракт 8д, 3 этаж
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.761280, 49.150644" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-3.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Южный парк</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул. Уютная,1
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.721502, 49.187600" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-3.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Палитра</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул.Братьев Батталовых 20 к.1
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                        <li>
+                            <button data-coords="55.724368, 49.174191" class="map-section__button map-button">
+                                <div class="map-button__body">
+                                    <img class="map-button__image" src="./img/map/img-3.jpg" alt="">
+                                    <div class="map-button__info">
+                                        <p class="map-button__name map-button__name--text-24 ">ЖК Палитра</p>
+                                        <p class="project-card__address map-button__address">
+                                            Казань, ул.Братьев Батталовых 20 к.1
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="map-section__yamaps-wrapper">
+                    <div class="map-section__yamaps js-footer-map"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-footer__body">
+            <div class="page-footer__main grid-block grid-block--increase">
+                <div class="page-footer__logo-wrapper grid-block__third-part">
+                    <a href="/" class="page-footer__logo logo">
+                        <svg class="icon">
+                            <use xlink:href="#logo-w"></use>
+                        </svg>
+                    </a>
+
+                    <ul class="page-footer__soc">
+                        <li>
+                            <a href="#" class="round-btn round-btn--white">
+                                <svg class="icon-fill">
+                                    <use xlink:href="#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="round-btn round-btn--white">
+                                <svg class="icon-fill">
+                                    <use xlink:href="#tg"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="round-btn round-btn--white">
+                                <svg class="icon-fill">
+                                    <use xlink:href="#ok"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="page-footer__form-wrapper grid-block__big-part">
+                    <form action="" class="page-footer__form form-footer" data-need-validation>
+                        <h3 class="form-footer__title form-footer__title--h3-text">
+                            Остались вопросы?
+                        </h3>
+                        <div class="form-footer__row">
+                            <div class="form-footer__inputs">
+                                <div class="form-footer__input input-wrapper">
+                                    <input class="input" type="text" name="feedback-name" id="feedback-name"
+                                        placeholder="Имя" required="" autocomplete="off" minlength="3"
+                                        data-parsley-reqtext="" data-parsley-trigger="input"
+                                        data-parsley-validate-if-empty>
+                                </div>
+                                <div class="form-footer__input input-wrapper">
+                                    <input class="input js-phone-input" type="tel" name="feedback-name"
+                                        id="feedback-name" placeholder="Телефон" required="" autocomplete="off"
+                                        data-parsley-phone="" data-parsley-trigger="input"
+                                        data-parsley-validate-if-empty>
+                                </div>
+                            </div>
+                            <button class="form-footer__submit main-btn main-btn--white"
+                                type="submit">Отправить</button>
+                        </div>
+                        <p class="form-footer__agreement form-footer__agreement--text-14">
+                            Нажимая "Оставить заявку", вы соглашаетесь с <a href="#" target="_blank">
+                                политикой конфиденциальности
+                            </a>
+                        </p>
+                    </form>
+
+                    <div class="page-footer__menus">
+                        <div class="page-footer__menu acco-menu">
+                            <div class="acco-menu__body">
+                                <input class="visually-hidden" hidden type="checkbox" name="acco-menu-1"
+                                    id="acco-menu-1">
+                                <label class="acco-menu__label" for="acco-menu-1">
+                                    <span>Покупателям</span>
+                                    <svg class="icon">
+                                        <use xlink:href="#drop-arrow"></use>
+                                    </svg>
+                                </label>
+                                <span class="acco-menu__title opacity-06">Покупателям</span>
+
+                                <ul class="acco-menu__list">
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Проекты
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Квартиры
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Акции и скидки
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="page-footer__menu acco-menu">
+                            <div class="acco-menu__body">
+                                <input class="visually-hidden" hidden type="checkbox" name="acco-menu-2"
+                                    id="acco-menu-2">
+                                <label class="acco-menu__label" for="acco-menu-2">
+                                    <span>Способы покупки</span>
+                                    <svg class="icon">
+                                        <use xlink:href="#drop-arrow"></use>
+                                    </svg>
+                                </label>
+                                <span class="acco-menu__title opacity-06">Способы покупки</span>
+
+                                <ul class="acco-menu__list">
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Оформление сделки онлайн
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Ипотека
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Рассрочка
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Материнский капитал
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="page-footer__menu acco-menu">
+                            <div class="acco-menu__body">
+                                <input class="visually-hidden" hidden type="checkbox" name="acco-menu-3"
+                                    id="acco-menu-3">
+                                <label class="acco-menu__label" for="acco-menu-3">
+                                    <span>О нас</span>
+                                    <svg class="icon">
+                                        <use xlink:href="#drop-arrow"></use>
+                                    </svg>
+                                </label>
+                                <span class="acco-menu__title opacity-06">О нас</span>
+
+                                <ul class="acco-menu__list">
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            О компании
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Новости
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Офисы продаж
+                                        </a>
+                                    </li>
+                                    <li class="acco-menu__item">
+                                        <a href="#" class="acco-menu__link">
+                                            Оплата
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer__bottom grid-block grid-block--increase">
+                <div class="page-footer__copyright page-footer__copyright--text-14 opacity-06 grid-block__third-part">
+                    <p class="page-footer__copyright-text page-footer__copyright-text--text-14 opacity-06">
+                        © Суварстроит 2015 — 2024
+                    </p>
+                </div>
+
+                <div class="page-footer__bottom-info grid-block__big-part">
+                    <a href="#" class="page-footer__policy page-footer__policy--text-14 opacity-06">
+                        Политика конфиденциальности
+                    </a>
+                    <a href="#" class="page-footer__dev dev">
+                        <span class="dev__text dev__text--text-14 opacity-06">Разработка сайта</span>
+                        <svg class="icon">
+                            <use xlink:href="#dev"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

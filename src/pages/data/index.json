@@ -1,0 +1,8 @@
+{
+    "title": "Главная страница",
+    "filterClass": true,
+    "mainPage": true,
+    "headerMainClass": true,
+    "mobileNavigation": true,
+    "noMapFooterClass": true
+}
