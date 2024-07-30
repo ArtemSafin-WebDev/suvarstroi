@@ -8,7 +8,6 @@ import accordions from './accordions';
 import tabs from './tabs';
 import menu from './menu';
 
-
 import animationsTriggers from './animationsTriggers';
 
 import setScrollbarWidth from './setScrollbarWidth';
@@ -50,10 +49,12 @@ import programsSwiper from './programsSwiper';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import aboutProject from './new/aboutProject';
+import projectIntro from './new/projectIntro';
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     // detectTouch();
     setScrollbarWidth();
     masks();
@@ -96,13 +97,16 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollToTop();
     expandLinkControl();
     programsSwiper();
+
+    aboutProject();
+    projectIntro();
 });
 
 document.addEventListener('lazyloaded', () => {
     ScrollTrigger.refresh();
 });
 
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     ScrollTrigger.refresh();
     setTimeout(() => document.body.classList.add('animatable'), 300);

@@ -11,7 +11,7 @@
 
     &__nav {
         position: relative;
-        background: var(--Light-Grey, #F5F5F5);
+        background: var(--Light-Grey, #f5f5f5);
 
         @extend ._border-16;
     }
@@ -25,7 +25,7 @@
         &--white {
             padding: 1.25rem 0;
 
-            background: var(--White, #FFF);
+            background: var(--White, #fff);
             box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.05);
         }
     }
@@ -56,7 +56,7 @@
     }
 
     &__nav {
-        &>*:not(.page-header__secondary-link, .page-header__mobile-menu-dropdown, .page-header__project-name) {
+        & > *:not(.page-header__secondary-link, .page-header__mobile-menu-dropdown, .page-header__project-name) {
             flex-grow: 1;
         }
     }
@@ -147,6 +147,15 @@
 }
 
 .page-header {
+    pointer-events: none;
+}
+
+.page-header__main,
+.page-header__second {
+    pointer-events: all;
+}
+
+.page-header {
     &:not(.page-header--fixed) {
         &.page-header--blur .page-header__main {
             color: var(--White, #fff);
@@ -170,7 +179,6 @@
 
             .round-btn {
                 @extend .round-btn--white;
-
             }
         }
     }
